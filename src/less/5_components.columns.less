@@ -1,0 +1,27 @@
+// --components--
+@media @tablets {
+  .col-1, .col-2 {
+    float: left;
+  }
+  .columns::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+  .box-body {
+    .col-1 {
+      width: 50%;
+    }
+  
+    .col-2 {
+      width: 47%;
+      margin-left: 3%;
+    }
+  } 
+}
+.col-2 {
+  position: relative;
+}
+
+  
+  

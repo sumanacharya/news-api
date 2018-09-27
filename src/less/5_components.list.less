@@ -1,0 +1,36 @@
+// --components--
+.items {
+    font-size: 13px;
+    padding: 4px 6px;
+    margin-top: 2px;
+    &:hover {
+      cursor: pointer;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+  .items--style1 {
+    color: @offBlue;
+    a {
+      color: @offBlue;
+    }
+    &:nth-child(2n+1) {
+      background-color: @faintGray;
+    }
+  }
+  .items--style2 {
+    padding: 4px 6px 4px 30px;
+    color: @black;
+    background-color: @white;
+    @media @phones {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    a {
+      color: @black;
+      
+    }
+  
+  }

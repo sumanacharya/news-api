@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>NEWS</title>
+    <style>
+         /* Accessibility color contrast update */
+        .items--style1:nth-child(2n+1){ background: #f3f3f3 !important;}
+        .box-header__h2--green { color: #188625;}
+    </style>
+</head>
+<body>
+    <main>
+    <section>
+        <div class="box">
+            <div class="box-header">
+                <h1>Latest News</h1>
+            </div>
+            <div class="box-body columns">
+                <div class="col-1">
+                    <h2 class="box-header__h2--red caret--red">Breaking News</h2>
+                    <ul>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:55PM</span>US teen held in shooting of five people</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:52PM</span>Israeli parties lure undecided voters</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:50PM</span>Suicide bombing, gunfire rock Kabul</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:40PM</span>Govt ordered to release Hobbit documents</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:35PM</span>Malaysian killed in Algeria crisis</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:28PM</span>Prison escapee caught after 16 years</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:26PM</span>Human Rights Watch warns on Mali</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:20PM</span>Climb turns on pain for riders</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:19PM</span>Son refused bail over mother’s death</a></li>
+                        <li class="items items--style1"><a href="#"><span class="time-stamp">1:18PM</span>MPs meet on Gold Coast V8 future</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h2 class="box-header__h2--green">Most popular sports news</h2>
+                    <ol id = "popular-sports-news"></ol>
+                    <div id="exception-handle">
+                        <div class="loader-wrap"><span class="loader"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>    
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/newsApi.js"></script>
+</body>
+</html>

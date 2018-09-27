@@ -1,0 +1,40 @@
+//loader animation
+
+#exception-handle {
+    background: rgba(41, 75, 114, 0.95);
+      position: absolute;
+      height: 24px;
+      width: 100%;
+      top: 28px;
+      right: 0px;
+  } 
+  .loader-wrap {
+    position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+      background-color: @faintGray;
+      width: 140px;
+      line-height: 0;
+  }
+  
+  .loader {
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background-color: @primary;
+    -webkit-animation: motion 0.5s linear infinite;
+    animation: motions .5s cubic-bezier(0.9, .4, 0.1, 0.9) infinite;
+    margin-bottom: 2px;
+  }
+  
+  @-webkit-keyframes motions {
+    0% { -webkit-transform: translateX(0) }
+   100% { -webkit-transform: translateX(110px); }
+  }
+  
+  @keyframes motions {
+    0% { -webkit-transform: translateX(0) }
+   100% { -webkit-transform: translateX(130px); }
+  }

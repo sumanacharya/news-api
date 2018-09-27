@@ -1,0 +1,27 @@
+// --utilities--
+.hidden {
+    display: none;
+}
+.time-stamp {
+    color: @lightGray;
+    font-size: 11px;
+    padding-right: 6px;
+    margin-right: 6px;
+    display: inline-block;
+    line-height: 11px;
+    border-right: 1px solid @lightGray;
+  }
+  
+  .caret--red::after {
+    content: '';
+    border: 5px solid @white;
+    display: inline-block;
+    border-left: 5px solid @red;
+    margin-left: 6px;
+  }  
+  .error {
+    color: @white;
+    font-size: 14px;
+    padding: 4px;
+    text-align: center;
+  }

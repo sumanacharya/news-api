@@ -1,0 +1,231 @@
+/*---------------------------------
+Inverted Triangle CSS
+  1.Settings
+  2.tools
+  3.Generic
+  4.Elements
+  5.Components
+  6.Utilities
+-------------------------------------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #234974;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+ol {
+  margin: 0 0 0 6px;
+  padding: 0;
+  counter-reset: i;
+}
+ol > li {
+  position: relative;
+}
+ol > li::before {
+  content: counter(i) ".";
+  counter-increment: i;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 21px;
+  color: #A1A1A1;
+  font-family: georgia, Helvetica, sans-serif;
+}
+section {
+  margin: 60px auto;
+}
+h1 {
+  font-size: 16px;
+  padding: 6px 10px 4px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+h2 {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1px 0;
+  padding: 5px 5px;
+}
+@media only screen and (min-width: 768px) {
+  .col-1,
+  .col-2 {
+    float: left;
+  }
+  .columns::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+  .box-body .col-1 {
+    width: 50%;
+  }
+  .box-body .col-2 {
+    width: 47%;
+    margin-left: 3%;
+  }
+}
+.col-2 {
+  position: relative;
+}
+.items {
+  font-size: 13px;
+  padding: 4px 6px;
+  margin-top: 2px;
+}
+.items:hover {
+  cursor: pointer;
+}
+.items:hover a {
+  text-decoration: underline;
+}
+.items--style1 {
+  color: #0373B3;
+}
+.items--style1 a {
+  color: #0373B3;
+}
+.items--style1:nth-child(2n+1) {
+  background-color: #E5E5E5;
+}
+.items--style2 {
+  padding: 4px 6px 4px 30px;
+  color: #000;
+  background-color: #fff;
+}
+@media only screen and (min-width: 576px) {
+  .items--style2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.items--style2 a {
+  color: #000;
+}
+.box {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 12px 16px 16px;
+}
+@media only screen and (min-width: 768px) {
+  .box {
+    width: 650px;
+  }
+}
+.box::before {
+  content: '';
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 3px solid #A9A9A9;
+  width: 100%;
+  display: block;
+  margin-bottom: 2px;
+}
+.box-header {
+  background-color: #234974;
+}
+.box-header__h2--red {
+  color: #B51D21;
+}
+.box-header__h2--green {
+  color: #249A31;
+  margin-top: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .box-header__h2--green {
+    margin-top: 1px;
+  }
+}
+.box-body {
+  border: 1px solid #A9A9A9;
+  background-color: #fff;
+  margin-top: 4px;
+  padding: 6px 6px 28px 6px;
+}
+#exception-handle {
+  background: rgba(41, 75, 114, 0.95);
+  position: absolute;
+  height: 24px;
+  width: 100%;
+  top: 28px;
+  right: 0px;
+}
+.loader-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #E5E5E5;
+  width: 140px;
+  line-height: 0;
+}
+.loader {
+  display: inline-block;
+  width: 10px;
+  height: 1px;
+  background-color: #234974;
+  -webkit-animation: motion 0.5s linear infinite;
+  animation: motions 0.5s cubic-bezier(0.9, 0.4, 0.1, 0.9) infinite;
+  margin-bottom: 2px;
+}
+@-webkit-keyframes motions {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(110px);
+  }
+}
+@keyframes motions {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(130px);
+  }
+}
+.hidden {
+  display: none;
+}
+.time-stamp {
+  color: #6E6E6E;
+  font-size: 11px;
+  padding-right: 6px;
+  margin-right: 6px;
+  display: inline-block;
+  line-height: 11px;
+  border-right: 1px solid #6E6E6E;
+}
+.caret--red::after {
+  content: '';
+  border: 5px solid #fff;
+  display: inline-block;
+  border-left: 5px solid #B51D21;
+  margin-left: 6px;
+}
+.error {
+  color: #fff;
+  font-size: 14px;
+  padding: 4px;
+  text-align: center;
+}
