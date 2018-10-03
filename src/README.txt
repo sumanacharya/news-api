@@ -8,7 +8,7 @@ Project Root
                 └── global
                 └── colors          
             ├── tools
-                └── mixins      // Demos to illustrate styles and interactions for the style guide
+                └── mixins      
             ├── generic         // reset and/or normalize styles goes here
             ├── elements        // styling for bare HTML elements (like H1, A, etc.)
                 └── page
